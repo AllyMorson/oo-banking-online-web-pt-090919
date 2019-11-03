@@ -23,6 +23,8 @@ def execute_transaction
     reject_transfer
   end 
 end
+
+def 
   
   def reject_transfer
     self.status = "rejected"
