@@ -27,7 +27,8 @@ end
 def reverse_transfer 
   if valid? && receiver.balance > amount && self.status == "complete"
     reciever.balance -= amount
-    sender.balance 
+    sender.balance += amount
+    self.status = "reversed"
   
   def reject_transfer
     self.status = "rejected"
