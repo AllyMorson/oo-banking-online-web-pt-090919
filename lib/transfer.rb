@@ -16,6 +16,8 @@ end
 
 def execute_transaction
   if valid? && sender.balace > amount && self.status == "pending"
+    sender.balace -= amount
+    
   
   
   
