@@ -24,7 +24,8 @@ def execute_transaction
   end 
 end
 
-def 
+def reverse_transfer 
+  if receiver.balance 
   
   def reject_transfer
     self.status = "rejected"
