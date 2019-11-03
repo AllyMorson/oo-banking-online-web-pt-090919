@@ -16,8 +16,8 @@ end
 
 def execute_transaction
   if valid? && sender.balace > amount && self.status == "pending"
-    sender.balace -= amount
-    receiver.balace += amount
+    sender.balance -= amount
+    receiver.balance += amount
     self.status = "complete"
   else 
     reject_transfer
@@ -25,7 +25,9 @@ def execute_transaction
 end
 
 def reverse_transfer 
-  if receiver.balance 
+  if valid? && receiver.balance > amount && self.status == "complete"
+    reciever.balance -= amount
+    sender.balance 
   
   def reject_transfer
     self.status = "rejected"
