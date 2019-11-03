@@ -20,7 +20,8 @@ def execute_transaction
     receiver.balace += amount
     self.status = "complete"
   else 
-    
+    reject_transfer
+  end 
   
   
   
