@@ -15,6 +15,7 @@ def valid?
 end 
 
 def execute_transaction
+  if valid? && account.balac
   
   
   
