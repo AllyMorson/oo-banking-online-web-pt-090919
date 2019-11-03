@@ -15,7 +15,7 @@ def valid?
 end 
 
 def execute_transaction
-  if valid? && sender.balace > amount && status == "pending"
+  if valid? && sender.balace > amount && self.status == "pending"
   
   
   
